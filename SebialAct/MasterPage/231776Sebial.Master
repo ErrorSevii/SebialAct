@@ -1,0 +1,157 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage/231776Sebial.master.cs" Inherits="SebialAct.WebForms._231776Sebial" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main-table {
+            width: 100vw;
+            height: 100vh;
+            border-style: solid;
+            border-width: 3px;
+            border-collapse: collapse;
+            background-color: #FFFFFF;
+        }
+        .header {
+            background-color: #000000;
+            color: #fff;
+            padding: 0;
+        }
+        .header-top {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            height: 70px;
+            padding: 10px 30px 0 0;
+        }
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+            padding: 0 30px;
+            background-color: #000;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+
+        .profile-img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+            object-fit: cover;
+            border: 3px solid #fff;
+        }
+        .nav-row {
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+        }
+        .nav-btn {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #0AA9DE;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.1s;
+            box-shadow: none;
+        }
+        .nav-btn:hover {
+            background: #0AA9DE;
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(10,169,222,0.18);
+        }
+        .nav-btn:active {
+            background: #0077a3;
+            color: #fff;
+            transform: scale(0.97);
+            box-shadow: 0 1px 4px rgba(0,119,163,0.18);
+        }
+        .content {
+            height: calc(100vh - 200px);
+            vertical-align: top;
+            background-color: #fff;
+        }
+        .footer {
+            height: 60px;
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="main-table">
+           <tr>
+    <td class="header">
+        <div class="header-row">
+            <div class="header-left">
+                <img src="../Images/formal-pic.jpg" alt="Profile" class="profile-img" />
+            </div>
+            <div class="header-right">
+                <div class="nav-buttons">
+                    <asp:Button runat="server" CssClass="nav-btn" Text="Home" PostBackUrl="~/WebForms/[231776][Sebial][Home].aspx" />
+                    <asp:Button runat="server" CssClass="nav-btn" Text="About" PostBackUrl="~/WebForms/[231776][Sebial][About].aspx" />
+                    <asp:Button runat="server" CssClass="nav-btn" Text="My Projects" PostBackUrl="~/WebForms/[231776][Sebial][My Projects].aspx" />
+                    <asp:Button runat="server" CssClass="nav-btn" Text="My Designs" PostBackUrl="~/WebForms/[231776][Sebial][My Designs].aspx" />
+                    <asp:Button runat="server" CssClass="nav-btn" Text="Resume" PostBackUrl="~/WebForms/[231776][Sebial][Resume].aspx" />
+                    <asp:Button runat="server" CssClass="nav-btn" Text="Services" PostBackUrl="~/WebForms/[231776][Sebial][Services].aspx" />
+                    <asp:Button runat="server" CssClass="nav-btn" Text="Organization" PostBackUrl="~/WebForms/[231776][Sebial][Organization].aspx" />
+                    <asp:Button runat="server" CssClass="nav-btn" Text="Appointment" PostBackUrl="~/WebForms/[231776][Sebial][Appointment].aspx" />
+                    <asp:Button runat="server" CssClass="nav-btn" Text="Contacts" PostBackUrl="~/WebForms/[231776][Sebial][Contacts].aspx" />
+                    <asp:Button runat="server" CssClass="nav-btn" Text="Achievements" PostBackUrl="~/WebForms/[231776][Sebial][Achievements].aspx" />
+                </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+                <td class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="footer">
+                    &copy; 2024 Sebial. All rights reserved.
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
